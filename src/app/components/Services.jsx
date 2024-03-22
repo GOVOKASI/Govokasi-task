@@ -50,7 +50,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="container mx-auto">
+    <div id="services" className="container mx-auto">
       <motion.div
         className="text-white text-center mb-8 text-2xl md:text-3xl lg:text-5xl font-extrabold"
         ref={ref}
@@ -89,6 +89,6 @@ export default function Services() {
           </motion.div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
