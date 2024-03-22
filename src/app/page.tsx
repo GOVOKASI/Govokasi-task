@@ -1,16 +1,16 @@
 import Services from "@/app/components/Services";
 import Header from "./components/header";
+import CompanyValues from "@/app/components/CompanyValues";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  bg-slate-950">
-      <Header />
-      <div
-        className={`${inter} container items-center mt-24 mx-auto py-4 px-12`}
-      >
+    <main className={`${inter} flex min-h-screen flex-col`}>
+      <div className="items-center mx-auto">
+        <Header />
         <Services />
+        <CompanyValues />
       </div>
     </main>
   );

@@ -50,7 +50,10 @@ export default function Services() {
   };
 
   return (
-    <div id="services" className="container mx-auto">
+    <section
+      id="services"
+      className="mx-auto m-auto mb-12 mt-12 p-6 bg-slate-950"
+    >
       <motion.div
         className="text-white text-center mb-8 text-2xl md:text-3xl lg:text-5xl font-extrabold"
         ref={ref}
@@ -61,7 +64,7 @@ export default function Services() {
       >
         WHY CHOOSE GOVOKASI?
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-4">
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
@@ -79,16 +82,16 @@ export default function Services() {
                   {service.icon}
                 </div>
               </div>
-              <div className="text-gray-200 text-xl font-bold font-inter leading-normal mb-2">
+              <div className="text-gray-200 text-xl font-bold mb-2">
                 {service.title}
               </div>
-              <div className="text-zinc-400 text-sm font-normal font-inter leading-tight">
+              <div className="text-zinc-400 text-sm font-normal">
                 {service.description}
               </div>
             </div>
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
