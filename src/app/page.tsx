@@ -1,4 +1,4 @@
-// import Image from "next/image";
+
 import Services from "@/app/components/Services";
 export default function Home() {
   return (
@@ -6,6 +6,6 @@ export default function Home() {
       <div className="container items-center mt-24 mx-auto py-4 px-12">
         <Services />
       </div>
-    </main>
+    </div>
   );
 }
