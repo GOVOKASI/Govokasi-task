@@ -163,7 +163,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col gap-10 lg:gap-12 relative">
             <Image
-              className="absolute left-0 bottom-[78.31px] lg:bottom-[0px] lg:left-[440px] -z-10 lg:-scale-x-100"
+              className="absolute left-0 bottom-[78.31px] lg:bottom-[60px] lg:left-[0px] -z-10"
               src="/hero-stars.svg"
               width={81.12}
               height={84.19}
