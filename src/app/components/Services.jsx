@@ -64,14 +64,14 @@ export default function Services() {
       >
         WHY CHOOSE GOVOKASI?
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-12">
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
             className="w-full rounded-2xl bg-gray-900"
             ref={cardRefs.current[index]}
             variants={cardVariants}
-            initial="initial"
+            initial="initial"git 
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           >
