@@ -4,16 +4,7 @@ import Image from 'next/image';
 const inter = Inter({ subsets: ['latin'] });
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
-
 export default function Header() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-  }, []);
-
   return (
     // <div className="w-full bg-orange-400 flex-col justify-start items-start inline-flex">
     //   <div className="self-stretch h-20 px-[140px] py-10 bg-white justify-between items-center inline-flex">
