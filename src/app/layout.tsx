@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ subsets: ['latin'], weight: 'variable' });
 
 export const metadata: Metadata = {
-  title: "Govokasi",
+  title: 'Govokasi',
   icons: {
-    icon: "/images/logo.png",
+    icon: '/images/logo.png',
   },
 };
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}`}>
+      <body className={`${inter.className}`}>
         {/* <p>haloo</p> */}
         {children}
       </body>
