@@ -1,34 +1,34 @@
-"use client";
-import React, { useRef } from "react";
-import { MdVerified, MdGroups } from "react-icons/md";
-import { RiGraduationCapFill } from "react-icons/ri";
-import { HiLightBulb } from "react-icons/hi";
-import { motion, useInView } from "framer-motion";
+'use client';
+import React, { useRef } from 'react';
+import { MdVerified, MdGroups } from 'react-icons/md';
+import { RiGraduationCapFill } from 'react-icons/ri';
+import { HiLightBulb } from 'react-icons/hi';
+import { motion, useInView } from 'framer-motion';
 
 const servicesData = [
   {
     icon: <MdVerified size={36} />,
-    title: "High Quality Intern",
+    title: 'High Quality Intern',
     description:
-      "Candidates will go through our Right KLIC Curation process to help identify their potential and competency.",
+      'Candidates will go through our Right KLIC Curation process to help identify their potential and competency.',
   },
   {
     icon: <MdGroups size={36} />,
-    title: "Experienced Coaches",
+    title: 'Experienced Coaches',
     description:
-      "We collaborate with experienced coaches and practitioners with more than 10 years experience in their field.",
+      'We collaborate with experienced coaches and practitioners with more than 10 years experience in their field.',
   },
   {
     icon: <RiGraduationCapFill size={36} />,
-    title: "Training and Coaching",
+    title: 'Training and Coaching',
     description:
-      "We provide continuous coaching and training during their internship program.",
+      'We provide continuous coaching and training during their internship program.',
   },
   {
     icon: <HiLightBulb size={36} className="rotate-180" />,
-    title: "Cost Efficient Solution",
+    title: 'Cost Efficient Solution',
     description:
-      "Our solution helps companies recruit the best candidates through cost efficient programs.",
+      'Our solution helps companies recruit the best candidates through cost efficient programs.',
   },
 ];
 
@@ -50,16 +50,13 @@ export default function Services() {
   };
 
   return (
-    <section
-      id="services"
-      className="mx-auto m-auto mb-12 mt-12 p-6 bg-slate-950"
-    >
+    <section id="services" className="mx-auto m-auto mb-12  p-6 bg-slate-950">
       <motion.div
         className="text-white text-center mb-8 text-2xl md:text-3xl lg:text-5xl font-extrabold"
         ref={ref}
         variants={titleVariants}
         initial="initial"
-        animate={InView ? "animate" : "initial"}
+        animate={InView ? 'animate' : 'initial'}
         transition={{ duration: 1 }}
       >
         WHY CHOOSE GOVOKASI?
@@ -72,8 +69,8 @@ export default function Services() {
             ref={cardRefs.current[index]}
             variants={cardVariants}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            animate={isInView ? 'animate' : 'initial'}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
           >
             <div className="p-5">
               <div className="mb-2 flex justify-center">
