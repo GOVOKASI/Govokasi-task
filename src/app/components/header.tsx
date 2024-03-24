@@ -100,7 +100,7 @@ export default function Header() {
     //   <div className="w-[270.67px] h-[481px] relative"></div>
     // </div>
     <div className="bg-gradient-to-b from-[#FFA640] to-[#D27000] overflow-hidden">
-      <div className="flex justify-center items-center h-20 bg-white lg:justify-start lg:px-[140px]">
+      <div className="flex justify-center items-center h-20 bg-white lg:justify-start lg:px-[140px] xl:px-[240px]">
         <Image
           src="/site-logo.png"
           width={167}
@@ -108,13 +108,13 @@ export default function Header() {
           alt="govokasi-logo"
         />
       </div>
-      <div className="flex justify-center lg:w-full py-20 lg:py-32 z-10 relative lg:px-[140px]">
-        <div className="flex lg:w-full lg:justify-between flex-col lg:flex-row-reverse gap-10 lg:gap-20 px-5 lg:px-0">
-          <div className="lg:flex lg:w-full lg:justify-center">
-            <div className="flex justify-center lg:items-center">
+      <div className="flex justify-center lg:w-full py-10 lg:py-[80px] xl:py-[120px] z-10 relative lg:px-[140px] xl:px-[240px]">
+        <div className="flex lg:w-full lg:justify-between flex-col md:flex-row-reverse gap-10 lg:gap-20 px-5 md:px-8 lg:px-0">
+          <div className="md:flex md:w-full md:justify-center">
+            <div className="flex justify-center md:items-center">
               <div className="w-fit h-fit relative lg:scale-150">
                 <Image
-                  className="absolute left-[-90px] bottom-[-160px] z-[-20] hidden lg:block"
+                  className="absolute left-[-90px] bottom-[-160px] z-[-20] hidden md:block"
                   src="/hero-lines.svg"
                   alt="hero-lines"
                   width={171}
@@ -186,7 +186,7 @@ export default function Header() {
       </div>
       <div className="relative">
         <Image
-          className="absolute right-0 bottom-[-60px] lg:hidden"
+          className="absolute right-0 bottom-[-60px] md:hidden"
           src="/hero-lines.svg"
           alt="hero-lines"
           width={171}

@@ -1,5 +1,6 @@
 'use client';
 import React, { useRef } from 'react';
+import Image from 'next/image';
 import { MdVerified, MdGroups } from 'react-icons/md';
 import { RiGraduationCapFill } from 'react-icons/ri';
 import { HiLightBulb } from 'react-icons/hi';
@@ -7,25 +8,25 @@ import { motion, useInView } from 'framer-motion';
 
 const servicesData = [
   {
-    icon: <MdVerified size={36} />,
+    icon: <MdVerified size={28} />,
     title: 'High Quality Intern',
     description:
       'Candidates will go through our Right KLIC Curation process to help identify their potential and competency.',
   },
   {
-    icon: <MdGroups size={36} />,
+    icon: <MdGroups size={28} />,
     title: 'Experienced Coaches',
     description:
       'We collaborate with experienced coaches and practitioners with more than 10 years experience in their field.',
   },
   {
-    icon: <RiGraduationCapFill size={36} />,
+    icon: <RiGraduationCapFill size={28} />,
     title: 'Training and Coaching',
     description:
       'We provide continuous coaching and training during their internship program.',
   },
   {
-    icon: <HiLightBulb size={36} className="rotate-180" />,
+    icon: <HiLightBulb size={28} className="rotate-180" />,
     title: 'Cost Efficient Solution',
     description:
       'Our solution helps companies recruit the best candidates through cost efficient programs.',
@@ -50,9 +51,12 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="mx-auto m-auto mb-12  p-6 bg-slate-950">
+    <section
+      id="services"
+      className="px-5 md:px-8 py-10 lg:py-[80px] xl:py-[120px] lg:px-[140px] xl:px-[240px] bg-[#0B0C1B] flex flex-col gap-10 lg:gap-12"
+    >
       <motion.div
-        className="text-white text-center mb-8 text-2xl md:text-3xl lg:text-5xl font-extrabold"
+        className="text-white leading-10 text-[32px] md:text-3xl lg:text-5xl lg:leading-[60px] font-extrabold"
         ref={ref}
         variants={titleVariants}
         initial="initial"
@@ -61,7 +65,7 @@ export default function Services() {
       >
         WHY CHOOSE GOVOKASI?
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-7">
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
@@ -72,17 +76,25 @@ export default function Services() {
             animate={isInView ? 'animate' : 'initial'}
             transition={{ duration: 1.5, ease: 'easeInOut' }}
           >
-            <div className="p-5">
-              <div className="mb-2 flex justify-center">
-                <div className="relative w-16 h-16 flex justify-center items-center rounded-full overflow-hidden p-2">
-                  <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] blur-2xl from-slate-500 to-transparent opacity-80"></div>
-                  {service.icon}
+            <div className="p-5 flex flex-col gap-4 bg-[#0E1023] h-full rounded-2xl">
+              <div className="flex w-fit">
+                <div className="relative w-[60px] h-[60px] items-center">
+                  <Image
+                    className="absolute blur-lg"
+                    src="/layer-blur-service.png"
+                    alt="layer-blur-service"
+                    width={400}
+                    height={400}
+                  />
+                  <div className="relative flex justify-center items-center h-full">
+                    {service.icon}
+                  </div>
                 </div>
               </div>
-              <div className="text-gray-200 text-xl font-bold mb-2">
+              <div className="text-[#E8E8EC] text-xl leading-6 font-bold mb-2 lg:max-w-[140px]">
                 {service.title}
               </div>
-              <div className="text-zinc-400 text-sm font-normal">
+              <div className="text-[#9697A7] text-sm leading-5 font-normal">
                 {service.description}
               </div>
             </div>

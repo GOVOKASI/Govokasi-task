@@ -1,25 +1,26 @@
-"use client";
-import React, { useRef } from "react";
-import FrameCompanyValues from "/public/FrameCompanyValues.svg";
-import { motion, useInView } from "framer-motion";
+'use client';
+import React, { useRef } from 'react';
+import FrameCompanyValues from '/public/FrameCompanyValues.svg';
+import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 const valuesData = [
   {
-    number: "01",
-    title: "Prime In Contribution",
+    number: '01',
+    title: 'Prime In Contribution',
     description:
-      "Our interns are coached to focus on contribution before compensation.",
+      'Our interns are coached to focus on contribution before compensation.',
   },
   {
-    number: "02",
-    title: "Rich In Competencies",
+    number: '02',
+    title: 'Rich In Competencies',
     description:
-      "Building skills and competencies, to be able to manage bigger challenges.",
+      'Building skills and competencies, to be able to manage bigger challenges.',
   },
   {
-    number: "03",
-    title: "Open For Collaboration",
-    description: "Intergenerational collaboration to handle complex tasks.",
+    number: '03',
+    title: 'Open For Collaboration',
+    description: 'Intergenerational collaboration to handle complex tasks.',
   },
 ];
 export default function CompanyValues() {
@@ -42,58 +43,69 @@ export default function CompanyValues() {
   return (
     <section
       id="company-values"
-      className="text-white bg-slate-100 p-6"
-      style={{
-        backgroundImage: `url(${FrameCompanyValues.src})`,
-        backgroundSize: "cover",
-        // backgroundPosition: "top center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="text-white bg-gradient-to-b xl:px-[240px] lg:px-[140px] from-white/60 via-white to-[#E8E8EC] px-5 md:px-8 relative lg:h-fit overflow-hidden"
+      // style={{
+      //   backgroundImage: `url(${FrameCompanyValues.src})`,
+      //   backgroundSize: 'cover',
+      //   // backgroundPosition: "top center",
+      //   backgroundRepeat: 'no-repeat',
+      // }}
     >
-      <div className="grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <Image
+        className="absolute -z-10 left-0 w-full"
+        src="/bg-stripe.svg"
+        alt="bg-stripe"
+        width={364}
+        height={600}
+      />
+      <div className="grid md:grid-cols-2 gap-10 items-center py-10 lg:gap-20 lg:py-[80px] xl:py-[120px]">
         <motion.div
-          className="text-black text-start mb-8 p-2"
+          className="text-black text-start flex flex-col gap-5 lg:gap-7 "
           ref={ref}
           variants={titleVariants}
           initial="initial"
-          animate={InView ? "animate" : "initial"}
+          animate={InView ? 'animate' : 'initial'}
           transition={{ duration: 1 }}
         >
-          <p className="mb-6 font-medium text-slate-600">
-            Three Steps To Success
-          </p>
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-extrabold mb-16">
+          <p className="font-medium text-[#484A66]">Three Steps To Success</p>
+          <h2 className="text-[32px] leading-10 md:text-3xl lg:text-5xl lg:leading-[60px] font-extrabold text-[#0B0C1B]">
             BUILDING (<span className="text-yellow-700">PRO</span>)FESSIONAL
             CHARACTER
           </h2>
-          <h2 className="text-xl md:text-2xl text-slate-600 font-medium opacity-80">
+          <h2 className="text-xl leading-6 md:text-2xl text-[#1A1D40] font-bold opacity-80">
             Our interns are continuously trained and coached to be the best.
           </h2>
         </motion.div>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-5">
           {valuesData.map((value, index) => (
             <motion.div
               key={index}
               ref={cardRefs.current[index]}
               variants={cardVariants}
               initial="initial"
-              animate={isInView ? "animate" : "initial"}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="w-full rounded-2xl bg-gray-900"
+              animate={isInView ? 'animate' : 'initial'}
+              transition={{ duration: 1.5, ease: 'easeInOut' }}
+              className="w-full rounded-2xl bg-[#0E1023]"
             >
-              <div className="p-5">
-                <div className="mb-2 flex justify-start items-center p-2 gap-5">
-                  <div className="relative w-20 h-20 flex justify-center items-center rounded-full overflow-hidden p-2">
-                    <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] blur-2xl from-slate-500 to-transparent opacity-80"></div>
-                    <span className="text-2xl md:text-4xl font-extrabold">
+              <div className="p-5 flex flex-col gap-4">
+                <div className="flex justify-start items-center gap-5">
+                  <div className="relative w-16 h-16 flex justify-center items-center">
+                    {/* <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] blur-2xl from-slate-500 to-transparent opacity-80"></div> */}
+                    <Image
+                      className="absolute blur-lg"
+                      src="/layer-blur-company-value.png"
+                      alt="layer-blur-company-value"
+                      layout="fill"
+                    />
+                    <span className="text-[40px] leading-[48px] md:text-4xl lg:text-[40px] lg:leading-[48px] font-extrabold z-10">
                       {value.number}
                     </span>
                   </div>
-                  <div className="text-gray-200 justify-center items-center text-center text-xl font-bold leading-normal mb-2">
+                  <div className="text-[#E8E8EC] justify-center items-center text-xl lg:text-2xl lg:leading-8 leading-6 font-bold max-w-[204px]">
                     {value.title}
                   </div>
                 </div>
-                <div className="text-zinc-400 text-sm font-normal leading-tight">
+                <div className="text-[#9697A7] text-sm font-normal leading-5">
                   {value.description}
                 </div>
               </div>
