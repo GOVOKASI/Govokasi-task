@@ -55,7 +55,7 @@ export default function Services() {
       className="mx-auto m-auto mb-12 mt-12 p-6 bg-slate-950"
     >
       <motion.div
-        className="text-white text-center mb-8 text-2xl md:text-3xl lg:text-5xl font-extrabold"
+        className="px-10 sm:px-0 text-white text-center mb-8 text-2xl md:text-3xl lg:text-5xl font-extrabold"
         ref={ref}
         variants={titleVariants}
         initial="initial"
@@ -68,7 +68,7 @@ export default function Services() {
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
-            className="w-full rounded-2xl bg-gray-900"
+            className="w-[300px] sm:w-full rounded-2xl bg-gray-900"
             ref={cardRefs.current[index]}
             variants={cardVariants}
             initial="initial"
