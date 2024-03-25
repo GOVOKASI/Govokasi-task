@@ -1,7 +1,8 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -28,11 +29,11 @@ export default function Header() {
                 animate={{
                   opacity: 1,
                   scale:
-                    typeof window !== 'undefined' && window.innerWidth > 768
+                    typeof window !== "undefined" && window.innerWidth > 768
                       ? 1.5
                       : 1,
                 }}
-                transition={{ duration: 0.5, delay: 0.8, ease: 'easeInOut' }}
+                transition={{ duration: 0.5, delay: 0.8, ease: "easeInOut" }}
                 className="w-fit h-fit relative lg:scale-150 "
               >
                 <Image
@@ -124,15 +125,17 @@ export default function Header() {
                 Govokasi help you to growth and gain your full potential skills
               </p>
             </motion.div>
-            <motion.button
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="h-12 lg:h-[54px] rounded-full px-5 lg:px-6 flex gap-4 items-center bg-white w-fit text-[#0B0C1B] font-bold text-sm lg:text-base lg:leading-5 leading-4"
-            >
-              <span>Register Now</span>
-              <span>-&gt;</span>
-            </motion.button>
+            <Link href={"https://form.smartsuite.com/swgnyg44/pcSNOwKfLz"}>
+              <motion.button
+                initial={{ opacity: 0, x: -200 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="h-12 lg:h-[54px] rounded-full px-5 lg:px-6 flex gap-4 items-center bg-white w-fit text-[#0B0C1B] font-bold text-sm lg:text-base lg:leading-5 leading-4"
+              >
+                <span>Register Now</span>
+                <span>-&gt;</span>
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>

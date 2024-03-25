@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Footer() {
@@ -33,10 +34,12 @@ export default function Footer() {
           <h3 className="uppercase text-2xl leading-8 font-black text-center sm:w-[200px] lg:text-[40px] lg:leading-[48px] lg:w-full">
             Every Minute is Precious
           </h3>
-          <button className="h-12 lg:h-[54px] rounded-full px-5 lg:px-6 flex gap-4 items-center bg-[#1A1D40] text-white w-fit font-bold text-sm lg:text-base lg:leading-5 leading-4">
-            <span>Register Now</span>
-            <span>-&gt;</span>
-          </button>
+          <Link href={"https://form.smartsuite.com/swgnyg44/pcSNOwKfLz"}>
+            <button className="h-12 lg:h-[54px] rounded-full px-5 lg:px-6 flex gap-4 items-center bg-[#1A1D40] text-white w-fit font-bold text-sm lg:text-base lg:leading-5 leading-4">
+              <span>Register Now</span>
+              <span>-&gt;</span>
+            </button>
+          </Link>
         </motion.div>
         <Image
           className="absolute right-0 bottom-0 -z-10"
