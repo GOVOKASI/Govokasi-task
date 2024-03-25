@@ -31,8 +31,8 @@ export default function CompanyValues() {
   };
 
   const cardRefs = useRef(valuesData.map(() => useRef(null)));
-  const isInView = cardRefs.current.map((ref) =>
-    useInView(ref, { once: true })
+  const isInView = cardRefs.current.map((cardRef) =>
+    useInView(cardRef, { once: true })
   );
 
   const cardVariants = {

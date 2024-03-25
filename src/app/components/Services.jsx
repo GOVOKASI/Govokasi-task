@@ -42,8 +42,8 @@ export default function Services() {
   };
 
   const cardRefs = useRef(servicesData.map(() => useRef(null)));
-  const isInView = cardRefs.current.map((ref) =>
-    useInView(ref, { threshold: 0.2 })
+  const isInView = cardRefs.current.map((cardRef) =>
+    useInView(cardRef, { threshold: 0.2 })
   );
   const cardVariants = {
     initial: { opacity: 0, x: -200 },
