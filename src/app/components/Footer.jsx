@@ -1,10 +1,32 @@
-import Image from 'next/image';
+"use client";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
 
 export default function Footer() {
+  const ref = useRef(null);
+  const InView = useInView(ref, { once: true });
+  const titleVariants = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+  };
+
+  const isInViewInfo = useInView(ref, { once: true });
+  const infoVariants = {
+    initial: { opacity: 0, x: -200 },
+    animate: { opacity: 1, x: 0 },
+  };
   return (
     <div className="text-[#1A1D40] bg-[#E8E8EC] relative">
       <div className="bg-[#E8E8EC] py-20 relative z-10">
-        <div className="flex justify-center flex-col items-center gap-5 lg:gap-7">
+        <motion.div
+          ref={ref}
+          variants={titleVariants}
+          initial="initial"
+          animate={InView ? "animate" : "initial"}
+          transition={{ duration: 1.2 }}
+          className="flex justify-center flex-col items-center gap-5 lg:gap-7"
+        >
           <p className="text-sm leading-5 lg:text-base lg:leading-5">
             So What are you waiting for?
           </p>
@@ -15,7 +37,7 @@ export default function Footer() {
             <span>Register Now</span>
             <span>-&gt;</span>
           </button>
-        </div>
+        </motion.div>
         <Image
           className="absolute right-0 bottom-0 -z-10"
           src="/footer-lines.svg"
@@ -36,7 +58,14 @@ export default function Footer() {
       </div>
       <div className="flex md:w-full lg:px-[140px] flex-col px-5 md:px-8 absolute bottom-0 py-10 gap-10 bg-gradient-to-b from-[#E8E8EC]/0 via-white to-white">
         <div className="flex justify-between gap-10">
-          <div className=" flex flex-col md:flex-row gap-5 lg:gap-7">
+          <motion.div
+            ref={ref}
+            variants={infoVariants}
+            initial="initial"
+            animate={isInViewInfo ? "animate" : "initial"}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className=" flex flex-col md:flex-row gap-5 lg:gap-7"
+          >
             <div className="text-sm leading-5 flex flex-col gap-1 md:w-[290.67px] lg:text-xl lg:leading-6 lg:gap-3">
               <p className="font-bold">Address</p>
               <span className="font-normal text-[#484A66] lg:text-base lg:leading-5">
@@ -56,8 +85,15 @@ export default function Footer() {
                 Register as Company Partner
               </span>
             </div>
-          </div>
-          <div className="flex flex-col justify-end gap-5">
+          </motion.div>
+          <motion.div
+            ref={ref}
+            variants={titleVariants}
+            initial="initial"
+            animate={InView ? "animate" : "initial"}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="flex flex-col justify-end gap-5"
+          >
             <Image
               className="md:w-[32px]"
               src="/instagram.svg"
@@ -79,12 +115,17 @@ export default function Footer() {
               width={48}
               height={48}
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="flex justify-between items-center relative">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 2 }}
+          className="flex justify-between items-center relative"
+        >
           <Image
             className="lg:w-[167px]"
-            src="/site-logo.png"
+            src="/site-logo.svg"
             alt="logo-footer"
             width={111.33}
             height={32}
@@ -92,7 +133,7 @@ export default function Footer() {
           <span className="text-xs leading-4 text-[#9697A7]">
             ©2024 Govokasi
           </span>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

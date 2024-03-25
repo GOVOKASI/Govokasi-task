@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], weight: 'variable' });
 export const metadata: Metadata = {
   title: 'Govokasi',
   icons: {
-    icon: '/images/logo.png',
+    icon: '/logo.svg',
   },
 };
 
