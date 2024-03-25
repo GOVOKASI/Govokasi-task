@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Header() {
   return (
@@ -28,11 +28,11 @@ export default function Header() {
                 animate={{
                   opacity: 1,
                   scale:
-                    typeof window !== "undefined" && window.innerWidth > 768
+                    typeof window !== 'undefined' && window.innerWidth > 768
                       ? 1.5
                       : 1,
                 }}
-                transition={{ duration: 0.5, delay: 0.8, ease: "easeInOut" }}
+                transition={{ duration: 0.5, delay: 0.8, ease: 'easeInOut' }}
                 className="w-fit h-fit relative lg:scale-150 "
               >
                 <Image
@@ -117,7 +117,7 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="flex flex-col gap-5"
             >
-              <h1 className="text-[40px] lg:text-[60px] flex-wrap gap-2 lg:leading-[76px] leading-[48px] font-black uppercase flex lg:flex-col">
+              <h1 className="text-[40px] text-white lg:text-[60px] flex-wrap gap-2 lg:leading-[76px] leading-[48px] font-black uppercase flex lg:flex-col">
                 <span>Jumpstart</span> <span>Your Career</span>
               </h1>
               <p className="text-xl lg:text-2xl lg:leading-8 leading-6 font-bold text-[#FFDAB0] lg:w-[531.2px]">
