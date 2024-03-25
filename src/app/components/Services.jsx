@@ -73,7 +73,7 @@ export default function Services() {
             variants={cardVariants}
             initial="initial"
             animate={isInView ? 'animate' : 'initial'}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.8, delay: 1 }}
           >
             <div className="p-5 flex flex-col gap-4 bg-[#0E1023] h-full rounded-2xl">
               <div className="flex w-fit">

@@ -97,27 +97,33 @@ export default function Footer() {
             transition={{ duration: 1, delay: 1.5 }}
             className="flex flex-col justify-end gap-5"
           >
-            <Image
-              className="md:w-[32px]"
-              src="/instagram.svg"
-              alt="instagram"
-              width={48}
-              height={48}
-            />
-            <Image
-              className="md:w-[32px]"
-              src="/whatsapp.svg"
-              alt="instagram"
-              width={48}
-              height={48}
-            />
-            <Image
-              className="md:w-[32px]"
-              src="/google.svg"
-              alt="instagram"
-              width={48}
-              height={48}
-            />
+            <Link href="https://www.instagram.com/govokasi/?hl=en">
+              <Image
+                className="md:w-[32px]"
+                src="/instagram.svg"
+                alt="instagram"
+                width={48}
+                height={48}
+              />
+            </Link>
+            <Link href="https://api.whatsapp.com/send/?phone=6281316653083">
+              <Image
+                className="md:w-[32px]"
+                src="/whatsapp.svg"
+                alt="whatsapp"
+                width={48}
+                height={48}
+              />
+            </Link>
+            <Link href="mailto:hello@govokasi.com">
+              <Image
+                className="md:w-[32px]"
+                src="/google.svg"
+                alt="google"
+                width={48}
+                height={48}
+              />
+            </Link>
           </motion.div>
         </div>
         <motion.div
