@@ -1,35 +1,35 @@
-"use client";
-import React, { useRef } from "react";
-import { MdVerified, MdGroups } from "react-icons/md";
-import { RiGraduationCapFill } from "react-icons/ri";
-import { HiLightBulb } from "react-icons/hi";
-import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+'use client';
+import React, { useRef } from 'react';
+import { MdVerified, MdGroups } from 'react-icons/md';
+import { RiGraduationCapFill } from 'react-icons/ri';
+import { HiLightBulb } from 'react-icons/hi';
+import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 const servicesData = [
   {
-    icon: <MdVerified size={36} />,
-    title: "High Quality Intern",
+    icon: <MdVerified size={36} className="text-white" />,
+    title: 'High Quality Intern',
     description:
-      "Candidates will go through our Right KLIC Curation process to help identify their potential and competency.",
+      'Candidates will go through our Right KLIC Curation process to help identify their potential and competency.',
   },
   {
-    icon: <MdGroups size={36} />,
-    title: "Experienced Coaches",
+    icon: <MdGroups size={36} className="text-white" />,
+    title: 'Experienced Coaches',
     description:
-      "We collaborate with experienced coaches and practitioners with more than 10 years experience in their field.",
+      'We collaborate with experienced coaches and practitioners with more than 10 years experience in their field.',
   },
   {
-    icon: <RiGraduationCapFill size={36} />,
-    title: "Training and Coaching",
+    icon: <RiGraduationCapFill size={36} className="text-white" />,
+    title: 'Training and Coaching',
     description:
-      "We provide continuous coaching and training during their internship program.",
+      'We provide continuous coaching and training during their internship program.',
   },
   {
-    icon: <HiLightBulb size={36} className="rotate-180" />,
-    title: "Cost Efficient Solution",
+    icon: <HiLightBulb size={36} className="rotate-180 text-white" />,
+    title: 'Cost Efficient Solution',
     description:
-      "Our solution helps companies recruit the best candidates through cost efficient programs.",
+      'Our solution helps companies recruit the best candidates through cost efficient programs.',
   },
 ];
 
@@ -59,8 +59,8 @@ export default function Services() {
         ref={ref}
         variants={titleVariants}
         initial="initial"
-        animate={InView ? "animate" : "initial"}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        animate={InView ? 'animate' : 'initial'}
+        transition={{ duration: 1, ease: 'easeInOut' }}
       >
         WHY CHOOSE GOVOKASI?
       </motion.div>
@@ -72,7 +72,7 @@ export default function Services() {
             ref={ref}
             variants={cardVariants}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
+            animate={isInView ? 'animate' : 'initial'}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
             <div className="p-5 flex flex-col gap-4 bg-[#0E1023] h-full rounded-2xl">
