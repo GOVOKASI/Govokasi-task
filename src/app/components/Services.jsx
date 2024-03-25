@@ -41,10 +41,9 @@ export default function Services() {
     animate: { y: 0, opacity: 1 },
   };
 
-  const cardRefs = useRef(servicesData.map(() => useRef(null)));
-  const isInView = cardRefs.current.map((cardRef) =>
-    useInView(cardRef, { threshold: 0.2 })
-  );
+  // const cardRefs = useRef(servicesData.map(() => useRef(null)));
+  const isInView = useInView(ref, { once: true });
+
   const cardVariants = {
     initial: { opacity: 0, x: -200 },
     animate: { opacity: 1, x: 1 },
@@ -70,7 +69,7 @@ export default function Services() {
           <motion.div
             key={index}
             className="w-full rounded-2xl bg-gray-900"
-            ref={cardRefs.current[index]}
+            ref={ref}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}

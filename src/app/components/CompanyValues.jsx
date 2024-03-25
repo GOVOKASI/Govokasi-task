@@ -30,10 +30,8 @@ export default function CompanyValues() {
     animate: { opacity: 1, x: 0 },
   };
 
-  const cardRefs = useRef(valuesData.map(() => useRef(null)));
-  const isInView = cardRefs.current.map((cardRef) =>
-    useInView(cardRef, { once: true })
-  );
+  // const cardRefs = useRef(valuesData.map(() => useRef(null)));
+  const isInView = useInView(ref, { once: true });
 
   const cardVariants = {
     initial: {
@@ -77,7 +75,7 @@ export default function CompanyValues() {
           {valuesData.map((value, index) => (
             <motion.div
               key={index}
-              ref={cardRefs.current[index]}
+              ref={ref}
               variants={cardVariants}
               initial="initial"
               animate={isInView ? "animate" : "initial"}
